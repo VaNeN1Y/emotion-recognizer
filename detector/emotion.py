@@ -3,9 +3,9 @@ from deepface import DeepFace
 
 class EmotionRecognizer:
     def __init__(self):
-        self.actions = ['emotion'],
-        self.enforce_detection = False,
+        self.actions = ['emotion']
         self.detector_backend = 'skip'
+        self.enforce_detection = False
 
     def recognize(self, face_img):
         try:
