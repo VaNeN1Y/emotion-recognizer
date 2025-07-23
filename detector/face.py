@@ -6,7 +6,11 @@ class FaceDetector:
         self.detector = MTCNN()
 
     def detect_face(self, frame_rgb):
-        faces = self.detector.detect_faces(frame_rgb)
-        if faces:
-            return faces[0]
-        return None
+        try:
+            faces = self.detector.detect_faces(frame_rgb)
+            if faces:
+                return faces[0]
+            return None
+        except Exception as e:
+            print("Img err")
+            return None
